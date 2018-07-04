@@ -207,7 +207,11 @@ A material design modal [bottom sheet](https://www.google.com/design/spec/compon
 		},
 
 		_marginChanged: function(newValue, oldValue) {
-			this.$.dialog.style.margin = newValue;
+			if(newValue && newValue.length) {
+				this.$.dialog.style.setProperty('margin', newValue, 'important');
+			} else {
+				this.$.dialog.style.margin='';
+			}
 		}
 	});
 
