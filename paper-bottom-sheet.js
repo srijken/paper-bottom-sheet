@@ -209,7 +209,7 @@ class PaperBottomSheet extends mixinBehaviors([IronSelectableBehavior], PolymerE
 	_onNeonAnimationFinish() {
 		if (this._placeHolder) {
 			const height = Array.from(this.$.dialog.children).reduce((total, x) => total + x.offsetHeight, 0);
-			this._placeHolder.style.height = height + 'px';
+			this._placeHolder.style.height = `${height}px`;
 			this._placeHolder.style.width = '100%';
 			this._placeHolder.style.display = 'block';
 			window.scrollBy(0, height);
