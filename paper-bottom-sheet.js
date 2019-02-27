@@ -88,7 +88,7 @@ class PaperBottomSheet extends mixinBehaviors([IronSelectableBehavior], PolymerE
 				value: 'Cancel',
 			},
 
- 			/**
+			/**
 			 * CSS value for margin of the sheet. Leave this empty to use full-width
 			 */
 			margin: {
