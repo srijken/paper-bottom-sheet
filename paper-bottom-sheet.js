@@ -211,7 +211,11 @@ class PaperBottomSheet extends mixinBehaviors([IronSelectableBehavior], PolymerE
 	}
 
 	_marginChanged(newValue, oldValue) {
-		this.$.dialog.style.margin = newValue;
+		if(newValue && newValue.length) {
+			this.$.dialog.style.setProperty('margin', newValue, 'important');
+		} else {
+			this.$.dialog.style.margin='';
+		}
 	}
 }
 window.customElements.define('paper-bottom-sheet', PaperBottomSheet);
