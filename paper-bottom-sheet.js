@@ -233,7 +233,7 @@ class PaperBottomSheet extends mixinBehaviors([IronSelectableBehavior], PolymerE
 			this.$.dialog.style.margin = '';
 		}
 	}
-	
+
 	_onNeonAnimationFinish() {
 		if (this._placeHolder) {
 			const height = Array.from(this.$.dialog.children).reduce((total, x) => total + x.offsetHeight, 0);
